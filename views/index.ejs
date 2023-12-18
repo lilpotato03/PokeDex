@@ -1,0 +1,30 @@
+<%- include('partials/header.ejs') %>
+<div class="cont">
+    <div class="pokedex">
+        <img src="pokedex image.png" alt="pokedex" >
+        <div class="pokedex-mainscreen">
+            <%if(locals.img){%>
+            <img src="<%=img %>" alt="sprite">
+            <%}%>
+        </div>
+        <div class="pokedex-secondscreen">
+            <span style="display: block;"><%= content %></span>
+        </div>
+        <div class="dpad vertical">
+            <button class="button"></button>
+            <button class="button"></button>
+        </div>
+        <div class="dpad horizontal">
+            <form action="/prev" method="POST"><button type="submit" class="button"></button></form>
+            <form action="/next" method="POST"><button type="submit"class="button"></button></form>
+            
+        </div>
+    </div>
+    <form action="/submit" method="POST">
+        <input type="text" class="input" name="name">
+        <button class="pokedex-submit">Submit</button>
+    </form>
+    
+</div>
+<%- include('partials/footer.ejs') %>
+

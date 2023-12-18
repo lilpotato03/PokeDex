@@ -1,0 +1,23 @@
+<div class="extreme-ele footer">
+    Under development...
+</div>
+</body>
+<script>
+    const toggle=document.querySelector('.toggle');
+    const body=document.querySelector('body');
+    const togglecircle=document.querySelector('.toggle-circle');
+    toggle.addEventListener('click',()=>{
+        if(body.getAttribute('class')==='dark'){
+            body.setAttribute('class','light');
+            toggle.setAttribute('class','toggle1 toggle');
+            togglecircle.setAttribute('class','circle1 toggle-circle');
+        }
+        else{
+            body.setAttribute('class','dark'); 
+            toggle.setAttribute('class','toggle2 toggle');
+            togglecircle.setAttribute('class','circle2 toggle-circle');
+        }
+        
+    })
+</script>
+</html>
